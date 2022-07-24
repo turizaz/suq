@@ -1,0 +1,10 @@
+.clean-href-eff-btn {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.clean-href-eff-btn:focus {
+    outline: none;
+    background-color: #666;
+}
