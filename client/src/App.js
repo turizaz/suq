@@ -8,6 +8,7 @@ import {createTheme} from "@mui/material";
 import {ThemeProvider} from "@emotion/react";
 import Register from "./components/register/register";
 import { purple, red, green, indigo } from '@mui/material/colors';
+import Asset from "./components/asset/asset";
 function App() {
 
     const darkTheme = createTheme({
@@ -37,6 +38,7 @@ function App() {
           <Routes>
               <Route path="/" element={<Dashboard />} />
               <Route path="dashboard" element={<Dashboard />} />
+              <Route path="asset" element={<Asset />} />
               <Route path="login" element={<Login />} />
               <Route path="register" element={<Register />} />
           </Routes>

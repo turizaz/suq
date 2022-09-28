@@ -1,5 +1,5 @@
 import {Column, Entity, PrimaryGeneratedColumn} from "typeorm";
-import {Optional} from "@nestjs/common";
+
 
 @Entity()
 export class UserEntity {

@@ -40,7 +40,7 @@ describe("Assets controller e2e", () => {
         console.log(tokens.accessToken);
         await request(app.getHttpServer())
             .get('/asset/zalupa')
-           // .set("Authorization", "Bearer "+tokens.accessToken)
+            .set("Authorization", "Bearer "+tokens.accessToken)
             .expect(200);
 
         jest.clearAllMocks();

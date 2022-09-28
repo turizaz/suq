@@ -3,23 +3,18 @@ import {
     Controller,
     Delete,
     Get,
-    Inject,
-    NotFoundException,
     Param,
     Patch,
     Post,
     Query,
-    UseGuards
 } from '@nestjs/common';
 import {AssetService} from "./asset.service";
 import {CreateAssetDto, GetAssetFilterDto, UpdateStatusDto} from "./asset.dto";
 import {Asset} from "./asset.model";
-import {AuthGuard} from "@nestjs/passport";
 import {GetUser} from "../auth/get-user.decorator";
 import {UserEntity} from "../users/user.entity";
 
 @Controller('asset')
-//@UseGuards(AuthGuard())
 export class AssetController {
     constructor(private assetService: AssetService) {}
 

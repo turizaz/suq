@@ -32,7 +32,6 @@ export class AuthService {
             const user = await this.userService.save(login, password);
             const tokens = await this.genTokens(user);
             await this.userService.saveRt(user, tokens.refreshToken);
-            console.log(11111)
             return tokens;
         } catch (e) {
             if(e.code === '23505') {
@@ -57,7 +56,7 @@ export class AuthService {
         const payload = {login: user.login};
         const atPromise = this.jwtService.signAsync({...payload}, {
             secret: "topGun",
-            expiresIn: "15m"
+            expiresIn: "10s"
         });
         const rtPromise = this.jwtService.signAsync({...payload}, {
             secret: "CharlieShin",
